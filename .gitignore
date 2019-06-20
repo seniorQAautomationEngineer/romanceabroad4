@@ -1,4 +1,8 @@
+.idea
 target/
+reports/
+video/
+test-output/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
