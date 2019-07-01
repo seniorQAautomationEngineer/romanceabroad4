@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 public class MediaTests extends BaseUI {
     String currentUrlMedia;
 
+
     @Test
     public void testMediaPage() {
         driver.findElement(Locators.LINK_MEDIA).click();
