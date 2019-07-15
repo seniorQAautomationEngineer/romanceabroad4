@@ -2,8 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class MainPageTests extends BaseUI{
-
+public class MainPageTests extends BaseUI {
 
 
     @Test
@@ -17,6 +16,15 @@ public class MainPageTests extends BaseUI{
     }
 
 
+    @Test
+    public void testLinksOnMainPage() {
+        mainPage.checkLinksOnWebPage("//a", "href");
+        mainPage.checkLinksOnWebPage("//img", "src");
+        driver.findElement(Locators.LINK_SEARCH);
+        mainPage.checkLinksOnWebPage("//a", "href");
+        mainPage.checkLinksOnWebPage("//img", "src");
+
+    }
 
 
 }

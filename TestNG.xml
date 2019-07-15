@@ -1,0 +1,79 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+
+<suite name="TestSuite" parallel="none" >
+
+
+    <test name="ChromeTestCases">
+
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+
+            <class name ="MediaTests"/>
+        </classes>
+
+    </test>
+
+
+
+
+
+
+
+    <test name="Chrome Tests Cases 2">
+
+        <parameter name="browser" value="chrome"/>
+
+         <groups>
+            <run>
+                <exclude name="ie"  />
+                <include name="admin"  />
+                <include name="user"  />
+            </run>
+        </groups>
+
+        <classes>
+
+            <class name ="SearchTests">
+            <methods>
+                <include name=".*Search.*"/>
+                <include name=".*Assert.*"/>
+                <exclude name=".*List.*"/>
+            </methods>
+        </class>
+
+    </classes>
+
+    </test>
+
+
+    <!--<test name="IETestCases">
+
+        <parameter name="browser" value="ie"/>
+
+        <classes>
+
+            <class name ="MediaTests"/>
+
+        </classes>
+
+    </test>
+
+    <test name="FirefoxTestCases">
+
+        <parameter name="browser" value="firefox"/>
+
+        <classes>
+
+            <class name ="MediaTests"/>
+        </classes>
+
+    </test>
+-->
+
+
+</suite>
+
+

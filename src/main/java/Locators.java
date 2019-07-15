@@ -17,4 +17,5 @@ public class Locators {
     //Search page
     public static final By LINK_SEARCH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
     public static final By DROP_DOWN_LIST_SORT_BY = By.xpath("//div[@class='form-inline']//select");
+    public static final By DROP_DOWN_MAX_AGE = By.cssSelector("select#age_max");
 }
