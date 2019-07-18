@@ -3,6 +3,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -22,6 +24,86 @@ public class BaseActions {
     public BaseActions(WebDriver driver, WebDriverWait wait){
         this.driver = driver;
         this.wait = wait;
+    }
+
+
+    // Different varieties of Ajax click
+    public void ajaxClick(WebElement element){
+
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        element.click();
+    }
+
+    public void ajaxClick(By by){
+        wait.until(ExpectedConditions.presenceOfElementLocated(by));
+        wait.until(ExpectedConditions.elementToBeClickable(by));
+        ajaxClick(driver.findElement(by));
+    }
+
+    public void ajaxClick(By by, int index){
+        wait.until(ExpectedConditions.presenceOfElementLocated(by));
+        wait.until(ExpectedConditions.elementToBeClickable(by));
+        ajaxClick(driver.findElements(by).get(index));
+    }
+
+    public void performClick(By locator){
+        WebElement element = driver.findElement(locator);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).perform();
+        actions.click().build().perform();
+    }
+
+    public void performClick(By locator, int index){
+        WebElement element = driver.findElements(locator).get(index);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).perform();
+        actions.click().build().perform();
+    }
+
+    public void performClick(WebElement element){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).perform();
+        actions.click().build().perform();
+    }
+
+    public void clickUnselectedCheckbox(By checkbox){
+        WebElement currentCheckbox = driver.findElement(checkbox);
+        if (!currentCheckbox.isSelected()){
+            ajaxClick(currentCheckbox);
+        }
+    }
+
+    public void clickUnselectedCheckbox(WebElement currentCheckbox){
+        if (!currentCheckbox.isSelected()){
+            ajaxClick(currentCheckbox);
+        }
+    }
+
+    public void clickUnselectedCheckbox(By checkbox, int index){
+        WebElement currentCheckbox = driver.findElements(checkbox).get(index);
+        if (!currentCheckbox.isSelected()){
+            ajaxClick(currentCheckbox);
+        }
+    }
+
+    // Scrolls
+    public void scrollToBottomOfPage(){
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+    }
+
+    public void ajaxScroll(WebElement element){
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    public void ajaxScroll(By by, int index) {
+        wait.until(ExpectedConditions.presenceOfElementLocated(by));
+        ajaxScroll(driver.findElements(by).get(index));
+    }
+
+    public void ajaxScrollUp(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,-250)", "");
     }
 
 
@@ -133,5 +215,14 @@ public class BaseActions {
         return 0;
 
     }
-
+    public void clickValueOfLists(By locator, String text){
+        List<WebElement> elements = driver.findElements(locator);
+        for (int i = 0; i <elements.size() ; i++) {
+            WebElement elementOfList = elements.get(i);
+            String value = elementOfList.getText();
+            if(value.contains(text)){
+                elementOfList.click();
+            }
+        }
+    }
 }

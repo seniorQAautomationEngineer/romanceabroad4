@@ -6,12 +6,23 @@
 
 
     <test name="ChromeTestCases">
-
         <parameter name="browser" value="chrome"/>
 
+        <groups>
+            <run>
+                <exclude name="ie"  />
+                <include name="admin"  />
+                <include name="user"  />
+            </run>
+        </groups>
         <classes>
-
-            <class name ="MediaTests"/>
+            <class name ="SearchTests">
+            <methods>
+                <include name=".*TestCase12.*"/>
+                <include name=".*TestCase11.*"/>
+                <exclude name=".*TestCase13.*"/>
+            </methods>
+        </class>
         </classes>
 
     </test>
@@ -22,7 +33,7 @@
 
 
 
-    <test name="Chrome Tests Cases 2">
+   <!-- <test name="Chrome Tests Cases 2">
 
         <parameter name="browser" value="chrome"/>
 
@@ -48,7 +59,7 @@
 
     </test>
 
-
+-->
     <!--<test name="IETestCases">
 
         <parameter name="browser" value="ie"/>

@@ -13,8 +13,8 @@ public class SearchTests extends BaseUI {
     public static final boolean testCase13 = true;
 
 
-    @Test(priority = 2, enabled = testCase12, groups = {"ie"})
-    public void testSearchPage() {
+    @Test(priority = 2, enabled = testCase12, groups = {"ie", "user","admin"})
+    public void testSearchPageTestCase12() {
         Assert.assertTrue(driver.findElement(Locators.LINK_SEARCH).isDisplayed(), "Element is not displayed");
         driver.findElement(Locators.LINK_SEARCH).click();
         currentUrlSearch = driver.getCurrentUrl();
@@ -28,21 +28,18 @@ public class SearchTests extends BaseUI {
     }
 
 @Test(priority = 3, enabled = testCase13, groups = {"user","admin"})
-    public void validateAssertions(){
+    public void verificationsWebTestCase13(){
         Assert.assertEquals("Web", "Web");
-
-       // Assert.assertTrue(driver.findElement(By.xpath("//a")).isSelected(), "Element is not displayed");
-
-      //  Assert.fail("Element is not displayed");
+        // Assert.assertTrue(driver.findElement(By.xpath("//a")).isSelected(), "Element is not displayed");
+    //  Assert.fail("Element is not displayed");
 
 
     }
 
 
     @Test(priority = 1, enabled = testCase11, groups = {"user","admin"})
-    public void selectRandomDropDownList() {
+    public void selectRandomDropDownListTestsOnSearchPageCase11() {
         driver.findElement(Locators.LINK_SEARCH).click();
-
         int sizeOfDropDownListSortBy = searchPage.getSizeDropDownList(Locators.DROP_DOWN_MAX_AGE);
         System.out.println(sizeOfDropDownListSortBy);
         for (int i = 0; i < 2; i++) {
