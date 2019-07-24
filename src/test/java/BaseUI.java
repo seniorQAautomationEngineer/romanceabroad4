@@ -18,6 +18,7 @@ public class BaseUI {
 
     MainPage mainPage;
     SearchPage searchPage;
+    BlogPage blogPage;
     SoftAssert softAssert = new SoftAssert();
 
 
@@ -56,6 +57,7 @@ public class BaseUI {
         wait = new WebDriverWait(driver, 20);
         mainPage = new MainPage(driver, wait);
         searchPage = new SearchPage(driver, wait);
+        blogPage = new BlogPage(driver, wait);
         driver.manage().window().maximize();
         driver.get(Data.mainUrl);
     }

@@ -5,7 +5,7 @@
 <suite name="TestSuite" parallel="none" >
 
 
-    <test name="ChromeTestCases">
+   <!-- <test name="ChromeTestCases">
         <parameter name="browser" value="chrome"/>
 
         <groups>
@@ -26,47 +26,35 @@
         </classes>
 
     </test>
+-->
 
 
 
 
 
 
-
-   <!-- <test name="Chrome Tests Cases 2">
+   <test name="Chrome Tests Cases 2">
 
         <parameter name="browser" value="chrome"/>
 
-         <groups>
-            <run>
-                <exclude name="ie"  />
-                <include name="admin"  />
-                <include name="user"  />
-            </run>
-        </groups>
+       <classes>
 
-        <classes>
+            <class name ="RegistrationTests">
 
-            <class name ="SearchTests">
-            <methods>
-                <include name=".*Search.*"/>
-                <include name=".*Assert.*"/>
-                <exclude name=".*List.*"/>
-            </methods>
         </class>
 
     </classes>
 
     </test>
 
--->
-    <!--<test name="IETestCases">
+
+    <test name="IETestCases">
 
         <parameter name="browser" value="ie"/>
 
         <classes>
 
-            <class name ="MediaTests"/>
+            <class name ="RegistrationTests"/>
 
         </classes>
 
@@ -78,11 +66,11 @@
 
         <classes>
 
-            <class name ="MediaTests"/>
+            <class name ="RegistrationTests"/>
         </classes>
 
     </test>
--->
+
 
 
 </suite>

@@ -2,6 +2,8 @@ import org.openqa.selenium.By;
 
 public class Locators {
 
+    public static  final By H1_TITLE = By.xpath("//h1");
+
     //Media page
     public static  final By LINK_MEDIA = By.cssSelector("a[href='https://romanceabroad.com/media/index']");
 
@@ -28,4 +30,9 @@ public class Locators {
     public static final By LINK_SEARCH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
     public static final By DROP_DOWN_LIST_SORT_BY = By.xpath("//div[@class='form-inline']//select");
     public static final By DROP_DOWN_MAX_AGE = By.cssSelector("select#age_max");
+
+
+    //Blog page
+    public static final By LINK_BLOG = By.xpath("//a[@href='https://romanceabroad.com/content/view/how-it-works']");
+    public static final By LINKS_OF_ACRTICLES = By.xpath("//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li");
 }
