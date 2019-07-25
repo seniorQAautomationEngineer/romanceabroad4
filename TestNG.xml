@@ -48,7 +48,7 @@
     </test>
 
 
-    <test name="IETestCases">
+   <!-- <test name="IETestCases">
 
         <parameter name="browser" value="ie"/>
 
@@ -70,7 +70,7 @@
         </classes>
 
     </test>
-
+-->
 
 
 </suite>

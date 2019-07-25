@@ -6,4 +6,7 @@ public class SearchPage extends BaseActions {
     public SearchPage(WebDriver driver, WebDriverWait wait){
         super(driver, wait);
     }
+
+
+
 }

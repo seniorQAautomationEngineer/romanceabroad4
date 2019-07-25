@@ -11,6 +11,7 @@ public class Locators {
     //Registration
     public static  final By BUTTON_REGISTRATION = By.xpath("//button[@id='show-registration-block']");
     public static  final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
+    public static  final By TOOLTIP_ERROR = By.xpath("//div[@class='tooltip']");
     public static  final By TEXT_FIELD_EMAIL = By.cssSelector("input#email");
     public static  final By TEXT_FIELD_PASSWORD = By.cssSelector("input#password");
     public static  final By TEXT_FIELD_NICKNAME = By.cssSelector("#nickname");
