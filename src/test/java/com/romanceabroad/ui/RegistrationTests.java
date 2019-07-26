@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

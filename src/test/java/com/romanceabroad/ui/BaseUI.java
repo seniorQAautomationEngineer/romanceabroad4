@@ -1,4 +1,9 @@
-import org.apache.commons.lang3.RandomStringUtils;
+package com.romanceabroad.ui;
+
+import com.romanceabroad.ui.BlogPage;
+import com.romanceabroad.ui.Data;
+import com.romanceabroad.ui.MainPage;
+import com.romanceabroad.ui.SearchPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

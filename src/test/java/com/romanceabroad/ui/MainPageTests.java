@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -38,5 +40,11 @@ public class MainPageTests extends BaseUI {
             driver.get(Data.mainUrl);
             mainTabs = driver.findElements(By.xpath("//ul[@class='navbar-nav']//li/a"));
         }
+}
+
+
+@Test
+    public void print(){
+        mainPage.javaWait(5000);
 }
 }
