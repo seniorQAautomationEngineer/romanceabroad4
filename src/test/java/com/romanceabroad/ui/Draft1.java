@@ -36,5 +36,46 @@ public class Draft1 extends BaseUI{
 
 }
 
+    @Test(dataProvider = "Search", dataProviderClass = DataProviders.class, priority = 3,  groups = {"user", "admin"})
+    public void searchDifferentResults13(String minAge, String maxAge, String sortBy) {
+        int min = Integer.parseInt(minAge);
+        int max = Integer.parseInt(maxAge);
+        System.out.println(min);
+        System.out.println(max);
+
+        searchPage.clickPrettyWomen();
+        searchPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_MIN_AGE), minAge);
+        searchPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_MAX_AGE), maxAge);
+        searchPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY), sortBy);
+        searchPage.clickSearchButton();
+
+        List<WebElement> infoAboutUser = driver.findElements(By.xpath("//div[@class='text-overflow']"));
+        List<WebElement> regions = driver.findElements(By.xpath("//div[@class='text-overflow']//a"));
+        //infoAboutUser.removeAll(regions);
+
+        for (int i = 0; i < infoAboutUser.size(); i++) {
+            if (i % 2 == 0) {
+                WebElement text = infoAboutUser.get(i);
+                String info = text.getText();
+                String[] splitedPhrase = info.split(", ");
+                String age = splitedPhrase[1];
+                System.out.println(age);
+                int ageNum = Integer.parseInt(age);
+                if (min <= ageNum && ageNum <= max) {
+
+                    System.out.println("Age " + ageNum + "  is correct");
+                } else {
+                    Assert.fail("Age is outside of range: " + ageNum);
+                }
+            }
+
+            mainPage.javaWaitSec(3);
+            infoAboutUser = driver.findElements(By.xpath("//div[@class='text-overflow']"));
+        }
+
+    }
+
+
+
 
 }

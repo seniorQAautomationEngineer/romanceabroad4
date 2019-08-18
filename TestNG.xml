@@ -5,7 +5,7 @@
 <suite name="TestSuite" parallel="none" >
 
 
-   <!-- <test name="ChromeTestCases">
+   <test name="ChromeTestCases">
         <parameter name="browser" value="chrome"/>
 
         <groups>
@@ -26,7 +26,7 @@
         </classes>
 
     </test>
--->
+
 
 
 
@@ -41,6 +41,7 @@
 
             <class name ="com.romanceabroad.ui.RegistrationTests">
 
+
         </class>
 
     </classes>
@@ -48,19 +49,19 @@
     </test>
 
 
-   <!-- <test name="IETestCases">
+   <test name="IETestCases">
 
-        <parameter name="browser" value="ie"/>
+           <parameter name="browser" value="ie"/>
 
-        <classes>
+           <classes>
 
-            <class name ="com.romanceabroad.ui.RegistrationTests"/>
+               <class name ="com.romanceabroad.ui.RegistrationTests"/>
 
-        </classes>
+           </classes>
 
-    </test>
+       </test>
 
-    <test name="FirefoxTestCases">
+    <!--   <test name="FirefoxTestCases">
 
         <parameter name="browser" value="firefox"/>
 
@@ -69,8 +70,8 @@
             <class name ="com.romanceabroad.ui.RegistrationTests"/>
         </classes>
 
-    </test>
--->
+    </test>-->
+
 
 
 </suite>

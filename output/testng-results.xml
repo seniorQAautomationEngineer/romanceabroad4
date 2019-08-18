@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestSuite" duration-ms="263228" started-at="2019-08-08T23:58:14Z" finished-at="2019-08-09T00:02:38Z">
+    <groups>
+    </groups>
+    <test name="Chrome tests" duration-ms="67542" started-at="2019-08-08T23:58:14Z" finished-at="2019-08-08T23:59:22Z">
+      <class name="com.romanceabroad.ui.RegistrationTests">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@5594a1b5]" name="setup" is-config="true" duration-ms="16551" started-at="2019-08-08T23:58:14Z" finished-at="2019-08-08T23:58:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@5594a1b5]" name="testRegistration2" duration-ms="13181" started-at="2019-08-08T23:58:31Z" data-provider="Registration2" finished-at="2019-08-08T23:58:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nick27118]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="afterActions()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@5594a1b5]" name="afterActions" is-config="true" duration-ms="1303" started-at="2019-08-08T23:58:44Z" finished-at="2019-08-08T23:58:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterActions -->
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@5594a1b5]" name="setup" is-config="true" duration-ms="12161" started-at="2019-08-08T23:58:46Z" finished-at="2019-08-08T23:58:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@5594a1b5]" name="testRegistration2" duration-ms="1563" started-at="2019-08-08T23:58:58Z" data-provider="Registration2" finished-at="2019-08-08T23:58:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11yahoo.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nick27118]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="afterActions()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@5594a1b5]" name="afterActions" is-config="true" duration-ms="1115" started-at="2019-08-08T23:58:59Z" finished-at="2019-08-08T23:59:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterActions -->
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@5594a1b5]" name="setup" is-config="true" duration-ms="12086" started-at="2019-08-08T23:59:00Z" finished-at="2019-08-08T23:59:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@5594a1b5]" name="testRegistration2" duration-ms="8523" started-at="2019-08-08T23:59:12Z" data-provider="Registration2" finished-at="2019-08-08T23:59:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@inbox.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nick27118]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="afterActions()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@5594a1b5]" name="afterActions" is-config="true" duration-ms="854" started-at="2019-08-08T23:59:21Z" finished-at="2019-08-08T23:59:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterActions -->
+      </class> <!-- com.romanceabroad.ui.RegistrationTests -->
+    </test> <!-- Chrome tests -->
+    <test name="IETestCases" duration-ms="127777" started-at="2019-08-08T23:59:22Z" finished-at="2019-08-09T00:01:30Z">
+      <class name="com.romanceabroad.ui.RegistrationTests">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@35f983a6]" name="setup" is-config="true" duration-ms="10945" started-at="2019-08-08T23:59:22Z" finished-at="2019-08-08T23:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ie]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@35f983a6]" name="testRegistration2" duration-ms="47067" started-at="2019-08-08T23:59:33Z" data-provider="Registration2" finished-at="2019-08-09T00:00:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nick27118]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="afterActions()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@35f983a6]" name="afterActions" is-config="true" duration-ms="550" started-at="2019-08-09T00:00:20Z" finished-at="2019-08-09T00:00:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterActions -->
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@35f983a6]" name="setup" is-config="true" duration-ms="10248" started-at="2019-08-09T00:00:21Z" finished-at="2019-08-09T00:00:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ie]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@35f983a6]" name="testRegistration2" duration-ms="4574" started-at="2019-08-09T00:00:31Z" data-provider="Registration2" finished-at="2019-08-09T00:00:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11yahoo.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nick27118]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="afterActions()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@35f983a6]" name="afterActions" is-config="true" duration-ms="529" started-at="2019-08-09T00:00:35Z" finished-at="2019-08-09T00:00:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterActions -->
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@35f983a6]" name="setup" is-config="true" duration-ms="8942" started-at="2019-08-09T00:00:36Z" finished-at="2019-08-09T00:00:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ie]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@35f983a6]" name="testRegistration2" duration-ms="44387" started-at="2019-08-09T00:00:45Z" data-provider="Registration2" finished-at="2019-08-09T00:01:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@inbox.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nick27118]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="afterActions()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@35f983a6]" name="afterActions" is-config="true" duration-ms="529" started-at="2019-08-09T00:01:29Z" finished-at="2019-08-09T00:01:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterActions -->
+      </class> <!-- com.romanceabroad.ui.RegistrationTests -->
+    </test> <!-- IETestCases -->
+    <test name="FirefoxTestCases" duration-ms="67687" started-at="2019-08-09T00:01:30Z" finished-at="2019-08-09T00:02:38Z">
+      <class name="com.romanceabroad.ui.RegistrationTests">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@1554909b]" name="setup" is-config="true" duration-ms="15218" started-at="2019-08-09T00:01:30Z" finished-at="2019-08-09T00:01:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@1554909b]" name="testRegistration2" duration-ms="6990" started-at="2019-08-09T00:01:45Z" data-provider="Registration2" finished-at="2019-08-09T00:01:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nick27118]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="afterActions()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@1554909b]" name="afterActions" is-config="true" duration-ms="2685" started-at="2019-08-09T00:01:52Z" finished-at="2019-08-09T00:01:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterActions -->
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@1554909b]" name="setup" is-config="true" duration-ms="15563" started-at="2019-08-09T00:01:55Z" finished-at="2019-08-09T00:02:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@1554909b]" name="testRegistration2" duration-ms="773" started-at="2019-08-09T00:02:10Z" data-provider="Registration2" finished-at="2019-08-09T00:02:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11yahoo.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nick27118]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="afterActions()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@1554909b]" name="afterActions" is-config="true" duration-ms="3056" started-at="2019-08-09T00:02:11Z" finished-at="2019-08-09T00:02:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterActions -->
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@1554909b]" name="setup" is-config="true" duration-ms="14312" started-at="2019-08-09T00:02:14Z" finished-at="2019-08-09T00:02:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@1554909b]" name="testRegistration2" duration-ms="6517" started-at="2019-08-09T00:02:28Z" data-provider="Registration2" finished-at="2019-08-09T00:02:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@inbox.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nick27118]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="afterActions()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@1554909b]" name="afterActions" is-config="true" duration-ms="2567" started-at="2019-08-09T00:02:35Z" finished-at="2019-08-09T00:02:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterActions -->
+      </class> <!-- com.romanceabroad.ui.RegistrationTests -->
+    </test> <!-- FirefoxTestCases -->
+  </suite> <!-- TestSuite -->
+</testng-results>

@@ -26,4 +26,16 @@ public class Data {
 
     public static final  String expectedUrlMedia = "https://romanceabroad.com/media/index";
     public static final  String expectedUrlSearch = "https://romanceabroad.com/users/search";
+
+
+    //User profile
+    public static final  String expectedTitleAllPhotos = "Ukrainian women photos";
+    public static final  String expectedTitleGallery = "Gallery";
+    public static final  String expectedTitlePhotoGallery = "Photo gallery";
+    public static final  String expectedTitleVideoGallery = "Video gallery";
+    public static final  String expectedTitleGalleryAlbums = "Gallery albums";
+
+    //Media
+    public static final String textMedia= "On our website you have access to photos of all different kinds of women";
+
 }
