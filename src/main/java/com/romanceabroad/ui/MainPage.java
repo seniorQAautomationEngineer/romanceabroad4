@@ -31,8 +31,9 @@ public class MainPage extends BaseActions {
     }
 
     public void completeFirstPartOfRegistration(String email, String password){
-        Reports.log("Wait email text field");
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+       // Reports.log("Wait email text field");
+       // driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        javaWaitSec(3);
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(Locators.TEXT_FIELD_EMAIL)));
 
         Reports.log("Type email in text field: " + email);

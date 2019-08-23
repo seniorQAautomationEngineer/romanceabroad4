@@ -229,7 +229,7 @@ public class BaseActions {
             Reports.log("Create new webelement of list");
             WebElement elementOfList = elements.get(i);
 
-            Reports.log("Create new String with text fron element of list");
+            Reports.log("Create new String with text from element of list");
             String value = elementOfList.getText();
             Reports.log("Value of list: " + value);
 

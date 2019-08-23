@@ -16,7 +16,7 @@ public class RegistrationTests extends  BaseUI{
 
 
 
-    @Video(name = "Registration test")
+ //   @Video(name = "Registration test")
     @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class)
     public void testRegistration2(String email,  String nickname, boolean requirement) {
 
