@@ -28,5 +28,17 @@ public class SearchPage extends BaseActions {
 
 
 
+
+  public void clickSearchParameters(String valueOfBox){
+      if(valueOfBox.contains("mobile")){
+          driver.findElement(Locators.MOBILE_LINK_SEARCH_PARAMETERS).click();
+      }
+
+  }
+
+
+
+
+
 }
 

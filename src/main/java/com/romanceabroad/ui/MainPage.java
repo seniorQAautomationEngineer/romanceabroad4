@@ -1,6 +1,9 @@
 package com.romanceabroad.ui;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -8,6 +11,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 
 public class MainPage extends BaseActions {
+
+    @FindBy(xpath = "//button[@id='show-registration-block']")
+    WebElement registrationButton;
 
     public MainPage(WebDriver driver, WebDriverWait wait){
         super(driver, wait);
@@ -18,7 +24,7 @@ public class MainPage extends BaseActions {
         wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_REGISTRATION));
 
         Reports.log("Click Join button");
-        driver.findElement(Locators.BUTTON_REGISTRATION).click();
+        registrationButton.click();
     }
 
     public void javaWait(int ms){
@@ -34,16 +40,16 @@ public class MainPage extends BaseActions {
        // Reports.log("Wait email text field");
        // driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         javaWaitSec(3);
-        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(Locators.TEXT_FIELD_EMAIL)));
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(Locators.TEXT_FIELD_EMAIL_REGISTRATION)));
 
         Reports.log("Type email in text field: " + email);
-        driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(email);
+        driver.findElement(Locators.TEXT_FIELD_EMAIL_REGISTRATION).sendKeys(email);
 
         Reports.log("Wait password text field");
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.TEXT_FIELD_PASSWORD)));
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.TEXT_FIELD_PASSWORD_REGISTRATION)));
 
         Reports.log("Type password in text field: " + password);
-        driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(password);
+        driver.findElement(Locators.TEXT_FIELD_PASSWORD_REGISTRATION).sendKeys(password);
 
 
     }
@@ -102,6 +108,38 @@ public class MainPage extends BaseActions {
 }
 
 
+    public void clickMobileMenu(String valueOfBox){
+        if(valueOfBox.contains("mobile")){
+            driver.findElement(Locators.MOBILE_MENU).click();
+        }
+    }
 
+    public void clickMobileMenu(){
+        try {
+            driver.findElement(Locators.MOBILE_MENU).click();
+        }catch (Exception e){
 
+        }
+
+    }
+    public void clickMobileMenu2(){
+        if(driver.findElement(Locators.MOBILE_MENU).isDisplayed()){
+            driver.findElement(Locators.MOBILE_MENU).click();
+        }
+    }
+    public void clickMobileMenu3(){
+        if(driver.findElements(Locators.MOBILE_MENU).size() > 0){
+            driver.findElement(Locators.MOBILE_MENU).click();
+        }
+    }
+public void clickSignInLink(){
+       javaWaitSec(3);
+    driver.findElement(Locators.LINK_SIGN_IN).click();
+}
+public void fillInSignInForm(String password){
+    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    driver.findElement(Locators.TEXT_FIELD_EMAIL_SIGN_IN).sendKeys(Data.email1);
+    driver.findElement(Locators.TEXT_FIELD_PASSWORD_SIGN_IN).sendKeys(password);
+    driver.findElement(Locators.BUTTON_SUBMIT_SIGN_IN).click();
+}
 }

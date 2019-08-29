@@ -45,6 +45,63 @@ public class DataProviders {
 
         };
     }
+    @DataProvider(name = "NewRequirementsForPassword")
+    public static Object[][] newRequirementsForPassword() {
+        return new Object[][]{
+                {"Boston1!", true},
+               {"Boston2@", true},
+                {"#Boston3", true},
+                {"$Bos4ton", true},
+                {"Bos%5ton", true},
+                {"Bos6^ton", true},
+                {"New York&7", true},
+                {"Miami**12", true},
+                {"Miami*-13", true},
+                {"Miami*-(14)", true},
+                {"Miami*-(13)+", true},
+                {"Miami.,90", true},
+                {"FLORIDA", false},
+                {"***", false},
+                {"36363663", false},
+                {"nevermind", false},
+                {"Fa1234%", false},  // less than 8 characters
+                {"Nevermi@", false}, //no digits
+                {"Arizona1", false}, // no spec characters
+                {"GLORY12*", false}, // no lower case
+                {"lowerc#1", false}, // no upper case
+                {"Polock12", false}, // no spec charact
 
+        };
+    }
+
+    @DataProvider(name = "OldRequirementsForPassword")
+    public static Object[][] oldRequirementsForPassword() {
+        return new Object[][]{
+
+                {"FLORIDA12", true},
+                {"***", false},
+                {"36363663", false},
+                {"Nevermind34", true},
+                {"Fa12345", false},  // less than 8 characters
+                {"Nevermi@", false}, //no digits
+                {"Arizona1", true},
+                {"GLORY12", false},
+                {"lowerc#1", false}, // no upper case
+                {"Polock12", true}, // no spec charact
+                {"Boston1!", false},
+                {"Boston2@", false},
+                {"Boston2@", false},
+                {"#Boston3", false},
+                {"$Bos4ton", false},
+                {"Bos%5ton", false},
+                {"Bos6^ton", false},
+                {"New York&7", false},
+                {"Miami**12", false},
+                {"Miami*-13", false},
+                {"Miami*-(14)", false},
+                {"Miami*-(13)+", false},
+                {"Miami.,90", false},
+        };
+    }
 
 }

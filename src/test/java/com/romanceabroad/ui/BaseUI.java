@@ -1,13 +1,16 @@
 package com.romanceabroad.ui;
 
 
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -36,22 +39,25 @@ public class BaseUI {
     protected TestBox testBox;
     protected TestBrowser testBrowser;
 
+    protected String valueOfBox;
+
 
     protected enum TestBox {
         WEB, MOBILE, SAUCE
     }
 
     protected enum TestBrowser {
-        CHROME, FIREFOX, IE
+        CHROME, FIREFOX, IE, REMOTE_CHROME, REMOTE_FIREFOX
     }
 
 
     @BeforeMethod(groups = {"user", "admin", "ie"}, alwaysRun = true)
-    @Parameters({"browser", "testBox", "platform", "version", "deviceName"})
+    @Parameters({"browser", "testBox", "platform", "version", "deviceName", "testEnv"})
 
     public void setup(@Optional("chrome") String browser, @Optional("web") String box,
                       @Optional("null") String platform,
                       @Optional("null") String version, @Optional("null") String device,
+                      @Optional("qa") String env,
                       Method method, ITestContext context) throws MalformedURLException {
         Reports.start(method.getDeclaringClass().getName() + " : " + method.getName());
 
@@ -62,12 +68,17 @@ public class BaseUI {
         } else if (box.equalsIgnoreCase("sauce")) {
             testBox = TestBox.SAUCE;
         }
+
         if (browser.equalsIgnoreCase("chrome")) {
             testBrowser = TestBrowser.CHROME;
         } else if (browser.equalsIgnoreCase("firefox")) {
             testBrowser = TestBrowser.FIREFOX;
         } else if (browser.equalsIgnoreCase("ie")) {
             testBrowser = TestBrowser.IE;
+        } else if (browser.equalsIgnoreCase("remoteChrome")) {
+            testBrowser = TestBrowser.REMOTE_CHROME;
+        } else if (browser.equalsIgnoreCase("remoteFirefox")) {
+            testBrowser = TestBrowser.REMOTE_FIREFOX;
         }
 
 
@@ -94,14 +105,29 @@ public class BaseUI {
                         driver.manage().deleteAllCookies();
                         break;
 
+                    case REMOTE_CHROME:
+                        System.out.println("Remote Chrome");
+                        ChromeOptions chromeOptions = new ChromeOptions();
+                        chromeOptions.addArguments("--headless");
+                        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeOptions);
+                        break;
+
+                    case REMOTE_FIREFOX:
+                        System.out.println("Remote Firefox");
+                        FirefoxOptions firefoxOptions = new FirefoxOptions();
+                        firefoxOptions.addArguments("--headless");
+                        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
+                        break;
+
                     default:
-                        System.out.println("Default!!!");
+                        System.out.println("Default");
                         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
                         driver = new ChromeDriver();
                         driver.get("chrome://settings/clearBrowserData");
                         break;
 
                 }
+                //driver.manage().window().maximize();
                 break;
 
             case MOBILE:
@@ -139,9 +165,21 @@ public class BaseUI {
         searchPage = new SearchPage(driver, wait);
         blogPage = new BlogPage(driver, wait);
         photosPage = new PhotosPage(driver, wait);
-        //  driver.manage().window().maximize();
+        driver.manage().window().maximize();
 
-        driver.get(Data.mainUrl);
+        PageFactory.initElements(driver, mainPage);
+        PageFactory.initElements(driver, searchPage);
+        PageFactory.initElements(driver, blogPage);
+
+        if (env.contains("qa")) {
+            driver.get(Data.mainUrl);
+        } else if (env.contains("uat")) {
+            driver.get("https://www.google.com/");
+        } else if (env.contains("prod")) {
+            driver.get("https://www.yahoo.com/");
+        }
+
+        valueOfBox = box;
     }
 
     @AfterMethod

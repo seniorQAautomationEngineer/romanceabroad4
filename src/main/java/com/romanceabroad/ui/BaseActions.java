@@ -247,4 +247,6 @@ public class BaseActions {
        String title = driver.findElement(Locators.H1_TITLE).getText();
        return title;
     }
+
+
 }
