@@ -21,7 +21,7 @@ public class Reports {
     // initialize the HtmlReporter
     public static ExtentHtmlReporter htmlReporter;
 
-    
+
     public static ExtentReports extent;
     private static ExtentTest currentTest;
     private static String lastAction;
