@@ -160,12 +160,23 @@ public class BaseUI {
                 break;
 
         }
+
+
+
         wait = new WebDriverWait(driver, 20);
+
+
         mainPage = new MainPage(driver, wait);
         searchPage = new SearchPage(driver, wait);
         blogPage = new BlogPage(driver, wait);
         photosPage = new PhotosPage(driver, wait);
+
         driver.manage().window().maximize();
+
+
+
+
+
 
         PageFactory.initElements(driver, mainPage);
         PageFactory.initElements(driver, searchPage);
@@ -189,7 +200,7 @@ public class BaseUI {
         }
         Reports.stop();
 
-        driver.quit();
+    // driver.quit();
     }
 
 

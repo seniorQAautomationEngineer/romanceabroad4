@@ -30,11 +30,10 @@ public class BaseActions {
 
 
     // Different varieties of Ajax click
-    public void ajaxClick(WebElement element){
-
+    public void ajaxClick(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         wait.until(ExpectedConditions.elementToBeClickable(element));
-        element.click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
     }
 
     public void ajaxClick(By by){
@@ -118,10 +117,15 @@ public class BaseActions {
         Select select = new Select(element);
         select.selectByIndex(index);
     }
+    public void getDropDownListByIndex(By locator, int index){
+        Select select = new Select(driver.findElement(locator));
+        select.selectByIndex(index);
+    }
 
     public void getDropDownListByText(WebElement element, String text){
         Select select = new Select(element);
         select.selectByVisibleText(text);
+
     }
 
     public void getDropDownListByValue(WebElement element, String value){

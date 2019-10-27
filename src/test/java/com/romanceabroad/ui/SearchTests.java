@@ -122,6 +122,31 @@ public class SearchTests extends BaseUI {
 
     }
 
+    @Test
+    public void searchByDropDownLists() {
+        searchPage.clickPrettyWomen();
+        int sizeOFSortList = searchPage.getSizeDropDownList(Locators.DROP_DOWN_LIST_SORT_BY);
+        System.out.println(sizeOFSortList);
+        for (int i = 0; i <sizeOFSortList ; i++) {
+            System.out.println(i);
+            searchPage.getDropDownListByIndex(Locators.DROP_DOWN_LIST_SORT_BY, i);
+        }
+
+
+    }
+    @Test
+    public void searchByDropDownListsReverse() {
+        searchPage.clickPrettyWomen();
+        int sizeOFSortList = searchPage.getSizeDropDownList(Locators.DROP_DOWN_LIST_SORT_BY);
+
+        for (int i = 3; i > -1; i--) {
+            System.out.println(i);
+            searchPage.getDropDownListByIndex(Locators.DROP_DOWN_LIST_SORT_BY, i);
+
+        }
+
+
+    }
 
 }
 

@@ -3,9 +3,11 @@ package com.romanceabroad.ui;
 
 import com.automation.remarks.testng.VideoListener;
 import com.automation.remarks.video.annotations.Video;
+import org.testng.ITestContext;
+import org.testng.annotations.Listeners;
 import org.testng.Assert;
 
-import org.testng.annotations.Listeners;
+
 import org.testng.annotations.Test;
 
 
@@ -16,9 +18,9 @@ public class RegistrationTests extends  BaseUI{
 
 
 
- //   @Video(name = "Registration test")
+    @Video(name = "Registration test")
     @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class)
-    public void testRegistration2(String email,  String nickname, boolean requirement) {
+    public void testRegistration2(String email, String nickname, boolean requirement, ITestContext context) {
 
 
         mainPage.clickJoinButton();
